@@ -26,7 +26,7 @@ services:
 #      - my-network
 
   redis:
-    image: redis:astraea
+    image: redis
     ports:
       - 6379:6379
     networks:
@@ -56,7 +56,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-auth-mongo:
-    image: mongo:astraea
+    image: mongo
     networks:
       - my-network
 
@@ -89,13 +89,13 @@ services:
 
 
   ts-account-mongo:
-    image: mongo:astraea
+    image: mongo
     networks:
       - my-network
 
   ts-route-service:
     build: ts-route-service
-    image: codewisdom/ts-route-service
+    image: codewisdom/ts-route-service:astraea
     restart: always
     ports:
          - 11178:11178
@@ -121,7 +121,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-contacts-mongo:
-      image: mongo:astraea
+      image: mongo
       networks:
         - my-network
 
@@ -137,7 +137,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-order-mongo:
-    image: mongo:astraea
+    image: mongo
     networks:
       - my-network
 
@@ -154,7 +154,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-order-other-mongo:
-    image: mongo:astraea
+    image: mongo
     networks:
       - my-network
 
@@ -171,7 +171,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-config-mongo:
-    image: mongo:astraea
+    image: mongo
     networks:
       - my-network
 
@@ -187,7 +187,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-station-mongo:
-    image: mongo:astraea
+    image: mongo
     networks:
       - my-network
 
@@ -203,7 +203,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-train-mongo:
-    image: mongo:astraea
+    image: mongo
     networks:
       - my-network
 
@@ -219,7 +219,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-travel-mongo:
-    image: mongo:astraea
+    image: mongo
     networks:
       - my-network
 
@@ -235,7 +235,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-travel2-mongo:
-      image: mongo:astraea
+      image: mongo
       networks:
         - my-network
 
@@ -296,7 +296,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-price-mongo:
-        image: mongo:astraea
+        image: mongo
         networks:
           - my-network
 
@@ -323,7 +323,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-security-mongo:
-        image: mongo:astraea
+        image: mongo
         networks:
           - my-network
 
@@ -339,7 +339,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-inside-payment-mongo:
-        image: mongo:astraea
+        image: mongo
         networks:
           - my-network
 
@@ -366,7 +366,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-payment-mongo:
-        image: mongo:astraea
+        image: mongo
         networks:
           - my-network
 
@@ -382,7 +382,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-rebook-mongo:
-        image: mongo:astraea
+        image: mongo
         networks:
           - my-network
 
@@ -409,7 +409,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-assurance-mongo:
-        image: mongo:astraea
+        image: mongo
         networks:
           - my-network
 
@@ -447,7 +447,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-ticket-office-mongo:
-          image: mongo:astraea
+          image: mongo
           networks:
             - my-network
 
@@ -463,12 +463,12 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-news-mongo:
-        image: mongo:astraea
+        image: mongo
         networks:
           - my-network
 
   ts-voucher-mysql:
-         image: mysql:astraea
+         image: mysql
          expose:
             - "3306"
          environment:
@@ -540,7 +540,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-consign-mongo:
-            image: mongo:astraea
+            image: mongo
             networks:
               - my-network
 
@@ -556,12 +556,12 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-consign-price-mongo:
-            image: mongo:astraea
+            image: mongo
             networks:
               - my-network
 
   ts-food-mongo:
-            image: mongo:astraea
+            image: mongo
             networks:
               - my-network
 
