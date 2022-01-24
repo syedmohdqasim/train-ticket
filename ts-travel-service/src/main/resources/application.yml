@@ -20,5 +20,5 @@ opentracing:
     udp-sender:
       host: jaeger
       port: 6831
-    const-sampler:
-      decision: false
+    # const-sampler:
+    #   decision: false
