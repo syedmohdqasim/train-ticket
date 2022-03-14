@@ -22,3 +22,5 @@ opentracing:
       port: 6831
     # const-sampler:
     #   decision: false
+      probabilistic-sampler:
+        sampling-rate: 0.01
