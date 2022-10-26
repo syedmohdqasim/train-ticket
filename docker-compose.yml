@@ -62,7 +62,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-auth-mongo:
-    image: mongo
+    image: mongo:5.0.10
     cpus: 1
     mem_limit: 1G
     networks:
@@ -82,7 +82,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-user-mongo:
-    image: mongo
+    image: mongo:5.0.10
     cpus: 1
     mem_limit: 1G
     networks:
@@ -103,7 +103,7 @@ services:
 
 
   ts-account-mongo:
-    image: mongo
+    image: mongo:5.0.10
     cpus: 1
     mem_limit: 1G
     networks:
@@ -123,7 +123,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-route-mongo:
-    image: mongo
+    image: mongo:5.0.10
     cpus: 1
     mem_limit: 1G
     networks:
@@ -143,7 +143,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-contacts-mongo:
-      image: mongo
+      image: mongo:5.0.10
       cpus: 1
       mem_limit: 1G
       networks:
@@ -163,7 +163,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-order-mongo:
-    image: mongo
+    image: mongo:5.0.10
     cpus: 1
     mem_limit: 1G
     networks:
@@ -184,7 +184,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-order-other-mongo:
-    image: mongo
+    image: mongo:5.0.10
     networks:
       - my-network
 
@@ -203,7 +203,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-config-mongo:
-    image: mongo
+    image: mongo:5.0.10
     cpus: 1
     mem_limit: 1G
     networks:
@@ -223,7 +223,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-station-mongo:
-    image: mongo
+    image: mongo:5.0.10
     cpus: 1
     mem_limit: 1G
     networks:
@@ -243,7 +243,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-train-mongo:
-    image: mongo
+    image: mongo:5.0.10
     cpus: 1
     mem_limit: 1G
     networks:
@@ -263,7 +263,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-travel-mongo:
-    image: mongo
+    image: mongo:5.0.10
     cpus: 1
     mem_limit: 1G
     networks:
@@ -283,7 +283,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-travel2-mongo:
-      image: mongo
+      image: mongo:5.0.10
       networks:
         - my-network
 
@@ -354,7 +354,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-price-mongo:
-        image: mongo
+        image: mongo:5.0.10
         cpus: 1
         mem_limit: 1G
         networks:
@@ -387,7 +387,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-security-mongo:
-        image: mongo
+        image: mongo:5.0.10
         cpus: 1
         mem_limit: 1G
         networks:
@@ -407,7 +407,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-inside-payment-mongo:
-        image: mongo
+        image: mongo:5.0.10
         cpus: 1
         mem_limit: 1G
         networks:
@@ -440,7 +440,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-payment-mongo:
-        image: mongo
+        image: mongo:5.0.10
         cpus: 1
         mem_limit: 1G
         networks:
@@ -460,7 +460,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-rebook-mongo:
-        image: mongo
+        image: mongo:5.0.10
         cpus: 1
         mem_limit: 1G
         networks:
@@ -493,7 +493,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-assurance-mongo:
-        image: mongo
+        image: mongo:5.0.10
         cpus: 1
         mem_limit: 1G
         networks:
@@ -539,7 +539,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-ticket-office-mongo:
-          image: mongo
+          image: mongo:5.0.10
           cpus: 1
           mem_limit: 1G
           networks:
@@ -559,7 +559,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-news-mongo:
-        image: mongo
+        image: mongo:5.0.10
         cpus: 1
         mem_limit: 1G
         networks:
@@ -606,7 +606,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-food-map-mongo:
-          image: mongo
+          image: mongo:5.0.10
           cpus: 1
           mem_limit: 1G
           networks:
@@ -652,7 +652,7 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-consign-mongo:
-            image: mongo
+            image: mongo:5.0.10
             cpus: 1
             mem_limit: 1G
             networks:
@@ -672,14 +672,14 @@ services:
       - /local/astraea-spans:/astraea-spans
 
   ts-consign-price-mongo:
-            image: mongo
+            image: mongo:5.0.10
             cpus: 1
             mem_limit: 1G
             networks:
               - my-network
 
   ts-food-mongo:
-            image: mongo
+            image: mongo:5.0.10
             cpus: 1
             mem_limit: 1G
             networks:
