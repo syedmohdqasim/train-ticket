@@ -37,7 +37,7 @@ services:
 
   ts-ui-dashboard:
     build: ts-ui-dashboard
-    image: codewisdom/ts-ui-dashboard:astraea
+    image: smqasim/ts-ui-dashboard:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -50,7 +50,7 @@ services:
 
   ts-auth-service:
     build: ts-auth-service
-    image: codewisdom/ts-auth-service:astraea
+    image: smqasim/ts-auth-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -70,7 +70,7 @@ services:
 
   ts-user-service:
     build: ts-user-service
-    image: codewisdom/ts-user-service:astraea
+    image: smqasim/ts-user-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -90,7 +90,7 @@ services:
 
   ts-verification-code-service:
     build: ts-verification-code-service
-    image: codewisdom/ts-verification-code-service:astraea
+    image: smqasim/ts-verification-code-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -111,7 +111,7 @@ services:
 
   ts-route-service:
     build: ts-route-service
-    image: codewisdom/ts-route-service:astraea
+    image: smqasim/ts-route-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -131,7 +131,7 @@ services:
 
   ts-contacts-service:
     build: ts-contacts-service
-    image: codewisdom/ts-contacts-service:astraea
+    image: smqasim/ts-contacts-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -151,7 +151,7 @@ services:
 
   ts-order-service:
     build: ts-order-service
-    image: codewisdom/ts-order-service:astraea
+    image: smqasim/ts-order-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -172,7 +172,7 @@ services:
 
   ts-order-other-service:
     build: ts-order-other-service
-    image: codewisdom/ts-order-other-service:astraea
+    image: smqasim/ts-order-other-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -191,7 +191,7 @@ services:
 
   ts-config-service:
     build: ts-config-service
-    image: codewisdom/ts-config-service:astraea
+    image: smqasim/ts-config-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -211,7 +211,7 @@ services:
 
   ts-station-service:
     build: ts-station-service
-    image: codewisdom/ts-station-service:astraea
+    image: smqasim/ts-station-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -231,7 +231,7 @@ services:
 
   ts-train-service:
     build: ts-train-service
-    image: codewisdom/ts-train-service:astraea
+    image: smqasim/ts-train-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -251,7 +251,7 @@ services:
 
   ts-travel-service:
     build: ts-travel-service
-    image: codewisdom/ts-travel-service:astraea
+    image: smqasim/ts-travel-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -271,7 +271,7 @@ services:
 
   ts-travel2-service:
     build: ts-travel2-service
-    image: codewisdom/ts-travel2-service:astraea
+    image: smqasim/ts-travel2-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -289,7 +289,7 @@ services:
 
   ts-preserve-service:
     build: ts-preserve-service
-    image: codewisdom/ts-preserve-service:astraea
+    image: smqasim/ts-preserve-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -302,7 +302,7 @@ services:
 
   ts-preserve-other-service:
     build: ts-preserve-other-service
-    image: codewisdom/ts-preserve-other-service:astraea
+    image: smqasim/ts-preserve-other-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -316,7 +316,7 @@ services:
 
   ts-basic-service:
     build: ts-basic-service
-    image: codewisdom/ts-basic-service:astraea
+    image: smqasim/ts-basic-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -329,7 +329,7 @@ services:
 
   ts-ticketinfo-service:
     build: ts-ticketinfo-service
-    image: codewisdom/ts-ticketinfo-service:astraea
+    image: smqasim/ts-ticketinfo-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -342,7 +342,7 @@ services:
 
   ts-price-service:
     build: ts-price-service
-    image: codewisdom/ts-price-service:astraea
+    image: smqasim/ts-price-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -362,7 +362,7 @@ services:
 
   ts-notification-service:
     build: ts-notification-service
-    image: codewisdom/ts-notification-service:astraea
+    image: smqasim/ts-notification-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -375,7 +375,7 @@ services:
 
   ts-security-service:
     build: ts-security-service
-    image: codewisdom/ts-security-service:astraea
+    image: smqasim/ts-security-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -395,7 +395,7 @@ services:
 
   ts-inside-payment-service:
     build: ts-inside-payment-service
-    image: codewisdom/ts-inside-payment-service:astraea
+    image: smqasim/ts-inside-payment-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -415,7 +415,7 @@ services:
 
   ts-execute-service:
     build: ts-execute-service
-    image: codewisdom/ts-execute-service:astraea
+    image: smqasim/ts-execute-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -428,7 +428,7 @@ services:
 
   ts-payment-service:
     build: ts-payment-service
-    image: codewisdom/ts-payment-service:astraea
+    image: smqasim/ts-payment-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -448,7 +448,7 @@ services:
 
   ts-rebook-service:
     build: ts-rebook-service
-    image: codewisdom/ts-rebook-service:astraea
+    image: smqasim/ts-rebook-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -468,7 +468,7 @@ services:
 
   ts-cancel-service:
     build: ts-cancel-service
-    image: codewisdom/ts-cancel-service:astraea
+    image: smqasim/ts-cancel-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -481,7 +481,7 @@ services:
 
   ts-assurance-service:
     build: ts-assurance-service
-    image: codewisdom/ts-assurance-service:astraea
+    image: smqasim/ts-assurance-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -501,7 +501,7 @@ services:
 
   ts-seat-service:
     build: ts-seat-service
-    image: codewisdom/ts-seat-service:astraea
+    image: smqasim/ts-seat-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -514,7 +514,7 @@ services:
 
   ts-travel-plan-service:
     build: ts-travel-plan-service
-    image: codewisdom/ts-travel-plan-service:astraea
+    image: smqasim/ts-travel-plan-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -527,7 +527,7 @@ services:
 
   ts-ticket-office-service:
     build: ts-ticket-office-service
-    image: codewisdom/ts-ticket-office-service:astraea
+    image: smqasim/ts-ticket-office-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -547,7 +547,7 @@ services:
 
   ts-news-service:
     build: ts-news-service
-    image: codewisdom/ts-news-service:astraea
+    image: smqasim/ts-news-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -578,7 +578,7 @@ services:
 
   ts-voucher-service:
     build: ts-voucher-service
-    image: codewisdom/ts-voucher-service:astraea
+    image: smqasim/ts-voucher-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -594,7 +594,7 @@ services:
 
   ts-food-map-service:
     build: ts-food-map-service
-    image: codewisdom/ts-food-map-service:astraea
+    image: smqasim/ts-food-map-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -614,7 +614,7 @@ services:
 
   ts-route-plan-service:
     build: ts-route-plan-service
-    image: codewisdom/ts-route-plan-service:astraea
+    image: smqasim/ts-route-plan-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -627,7 +627,7 @@ services:
 
   ts-food-service:
     build: ts-food-service
-    image: codewisdom/ts-food-service:astraea
+    image: smqasim/ts-food-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -640,7 +640,7 @@ services:
 
   ts-consign-service:
     build: ts-consign-service
-    image: codewisdom/ts-consign-service:astraea
+    image: smqasim/ts-consign-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -660,7 +660,7 @@ services:
 
   ts-consign-price-service:
     build: ts-consign-price-service
-    image: codewisdom/ts-consign-price-service:astraea
+    image: smqasim/ts-consign-price-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -687,7 +687,7 @@ services:
 
   ts-admin-basic-info-service:
     build: ts-admin-basic-info-service
-    image: codewisdom/ts-admin-basic-info-service:astraea
+    image: smqasim/ts-admin-basic-info-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -700,7 +700,7 @@ services:
 
   ts-admin-order-service:
     build: ts-admin-order-service
-    image: codewisdom/ts-admin-order-service:astraea
+    image: smqasim/ts-admin-order-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -713,7 +713,7 @@ services:
 
   ts-admin-route-service:
     build: ts-admin-route-service
-    image: codewisdom/ts-admin-route-service:astraea
+    image: smqasim/ts-admin-route-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -730,7 +730,7 @@ services:
 
   ts-admin-travel-service:
     build: ts-admin-travel-service
-    image: codewisdom/ts-admin-travel-service:astraea
+    image: smqasim/ts-admin-travel-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
@@ -747,7 +747,7 @@ services:
 
   ts-admin-user-service:
     build: ts-admin-user-service
-    image: codewisdom/ts-admin-user-service:astraea
+    image: smqasim/ts-admin-user-service:astraea
     cpus: 1
     mem_limit: 1G
     restart: always
