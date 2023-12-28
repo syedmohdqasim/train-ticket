@@ -1,0 +1,688 @@
+
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-admin-basic-info-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-admin-basic-info-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-admin-basic-info-service
+    spec:
+
+      containers:
+      - name: ts-admin-basic-info-service
+        image: smqasim/ts-admin-basic-info-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 18767
+
+---
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-admin-order-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-admin-order-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-admin-order-service
+    spec:
+
+      containers:
+      - name: ts-admin-order-service
+        image: smqasim/ts-admin-order-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 16112
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-admin-route-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-admin-route-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-admin-route-service
+    spec:
+
+      containers:
+      - name: ts-admin-route-service
+        image: smqasim/ts-admin-route-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 16113
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-admin-travel-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-admin-travel-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-admin-travel-service
+    spec:
+
+      containers:
+      - name: ts-admin-travel-service
+        image: smqasim/ts-admin-travel-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 16114
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-admin-user-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-admin-user-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-admin-user-service
+    spec:
+
+      containers:
+      - name: ts-admin-user-service
+        image: smqasim/ts-admin-user-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 16115
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-assurance-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-assurance-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-assurance-service
+    spec:
+
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: ts-assurance-service
+        image: smqasim/ts-assurance-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 18888
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-basic-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-basic-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-basic-service
+    spec:
+
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: ts-basic-service
+        image: smqasim/ts-basic-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 15680
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-cancel-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-cancel-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-cancel-service
+    spec:
+
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: ts-cancel-service
+        image: smqasim/ts-cancel-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 18885
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-config-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-config-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-config-service
+    spec:
+
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: ts-config-service
+        image: smqasim/ts-config-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 15679
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-consign-price-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-consign-price-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-consign-price-service
+    spec:
+
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: ts-consign-price-service
+        image: smqasim/ts-consign-price-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 16110
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-consign-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-consign-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-consign-service
+    spec:
+
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: ts-consign-service
+        image: smqasim/ts-consign-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 16111
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-contacts-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-contacts-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-contacts-service
+    spec:
+
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: ts-contacts-service
+        image: smqasim/ts-contacts-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 12347
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-execute-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-execute-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-execute-service
+    spec:
+
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: ts-execute-service
+        image: smqasim/ts-execute-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 12386
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-food-map-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-food-map-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-food-map-service
+    spec:
+
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: ts-food-map-service
+        image: smqasim/ts-food-map-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 18855
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-admin-basic-info-service
+spec:
+  ports:
+    - name: http
+      port: 18767
+  selector:
+   app: ts-admin-basic-info-service
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-admin-order-service
+spec:
+  ports:
+    - name: http
+      port: 16112
+  selector:
+   app: ts-admin-order-service
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-admin-route-service
+spec:
+  ports:
+    - name: http
+      port: 16113
+  selector:
+   app: ts-admin-route-service
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-admin-travel-service
+spec:
+  ports:
+    - name: http
+      port: 16114
+  selector:
+   app: ts-admin-travel-service
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-admin-user-service
+spec:
+  ports:
+    - name: http
+      port: 16115
+  selector:
+   app: ts-admin-user-service
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-assurance-service
+spec:
+  ports:
+    - name: http
+      port: 18888
+  selector:
+   app: ts-assurance-service
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-basic-service
+spec:
+  ports:
+    - name: http
+      port: 15680
+  selector:
+   app: ts-basic-service
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-cancel-service
+spec:
+  ports:
+    - name: http
+      port: 18885
+  selector:
+   app: ts-cancel-service
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-config-service
+spec:
+  ports:
+    - name: http
+      port: 15679
+  selector:
+   app: ts-config-service
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-consign-price-service
+spec:
+  ports:
+    - name: http
+      port: 16110
+  selector:
+   app: ts-consign-price-service
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-consign-service
+spec:
+  ports:
+    - name: http
+      port: 16111
+  selector:
+   app: ts-consign-service
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-contacts-service
+spec:
+  ports:
+    - name: http
+      port: 12347
+  selector:
+   app: ts-contacts-service
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-execute-service
+spec:
+  ports:
+    - name: http
+      port: 12386
+  selector:
+   app: ts-execute-service
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-food-map-service
+spec:
+  ports:
+    - name: http
+      port: 18855
+  selector:
+   app: ts-food-map-service
