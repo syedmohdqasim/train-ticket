@@ -10,8 +10,14 @@ ADD ./package.json /app/
 ADD ./public /app/public
 # RUN npm install
 
+RUN mkdir -p /.npm
+
+RUN chmod 777 -R /.npm
+
 ADD ./bin /app/bin
 ADD ./app.js /app/
+
+
 CMD [ "npm", "start" ]
 
 EXPOSE 16108
