@@ -1,0 +1,520 @@
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-food-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-food-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-food-service
+    spec:
+      containers:
+      - name: ts-food-service
+        image: smqasim/ts-food-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 18856
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-inside-payment-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-inside-payment-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-inside-payment-service
+    spec:
+      containers:
+      - name: ts-inside-payment-service
+        image: smqasim/ts-inside-payment-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 18673
+
+---
+
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-news-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-news-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-news-service
+    spec:
+      containers:
+      - name: ts-news-service
+        image: smqasim/ts-news-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 12862
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-notification-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-notification-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-notification-service
+    spec:
+      containers:
+      - name: ts-notification-service
+        image: smqasim/ts-notification-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 17853
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-order-other-service
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: ts-order-other-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-order-other-service
+    spec:
+      containers:
+      - name: ts-order-other-service
+        image: smqasim/ts-order-other-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 12032
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-order-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ts-order-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-order-service
+    spec:
+      containers:
+      - name: ts-order-service
+        image: smqasim/ts-order-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 12031
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-payment-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-payment-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-payment-service
+    spec:
+      containers:
+      - name: ts-payment-service
+        image: smqasim/ts-payment-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 19001
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-preserve-other-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ts-preserve-other-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-preserve-other-service
+    spec:
+      containers:
+      - name: ts-preserve-other-service
+        image: smqasim/ts-preserve-other-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 14569
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-preserve-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-preserve-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-preserve-service
+    spec:
+      containers:
+      - name: ts-preserve-service
+        image: smqasim/ts-preserve-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 14568
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-price-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ts-price-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-price-service
+    spec:
+      containers:
+      - name: ts-price-service
+        image: smqasim/ts-price-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 16579
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-rebook-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-rebook-service
+  template:
+    metadata:
+      namespace: ai4cloudops-f7f10d9
+      labels:
+        app: ts-rebook-service
+    spec:
+      containers:
+      - name: ts-rebook-service
+        image: smqasim/ts-rebook-service:astraea
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 500Mi
+
+        ports:
+        - containerPort: 18886
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-food-service
+spec:
+  ports:
+    - name: http
+      port: 18856
+  selector:
+   app: ts-food-service
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-inside-payment-service
+spec:
+  ports:
+    - name: http
+      port: 18673
+  selector:
+   app: ts-inside-payment-service
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-notification-service
+spec:
+  ports:
+    - name: http
+      port: 17853
+  selector:
+   app: ts-notification-service
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-news-service
+spec:
+  ports:
+    - name: http
+      port: 12862
+  selector:
+   app: ts-news-service
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-order-other-service
+spec:
+  ports:
+    - name: http
+      port: 12032
+  selector:
+   app: ts-order-other-service
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-order-service
+spec:
+  ports:
+    - name: http
+      port: 12031
+  selector:
+   app: ts-order-service
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-payment-service
+spec:
+  ports:
+    - name: http
+      port: 19001
+  selector:
+   app: ts-payment-service
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-preserve-other-service
+spec:
+  ports:
+    - name: http
+      port: 14569
+  selector:
+   app: ts-preserve-other-service
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-preserve-service
+spec:
+  ports:
+    - name: http
+      port: 14568
+  selector:
+   app: ts-preserve-service
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-price-service
+spec:
+  ports:
+    - name: http
+      port: 16579
+  selector:
+   app: ts-price-service
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: ai4cloudops-f7f10d9
+  name: ts-rebook-service
+spec:
+  ports:
+    - name: http
+      port: 18886
+  selector:
+   app: ts-rebook-service
+
+---
